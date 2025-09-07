@@ -28,7 +28,7 @@ print(2*3%5)
 print((2%-4), (2%4), (2**3**2))
 #-2,2,512
 ```
-
+### 2.
 ```python
 type("Hello")
 # <class 'str'>
@@ -45,4 +45,23 @@ type(True)
 type("False")
 # <class 'str'>
 ```
+### 3.
+### a.
+```python
+print(-8+4.*2**5//9%3)
 ```
+### b.
+```python
+#2**5 = 35
+#4.*32 = 128.0
+#128.0//9 = 14.0
+#14.0 % 3 = 2.0
+#-8+2.0 = -6.0
+```
+### c.
+```python
+print(-8+4.*2**5//9%3)
+#-6.0
+```
+
+;Challanges I faced was remembering the operator precedence rules for the arithmetic function and figuring out the outputs without using python.
