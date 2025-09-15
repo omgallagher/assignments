@@ -50,3 +50,46 @@ del my_list_ten
 ```
 ### f.
 ```python
+```
+### g.
+```python
+x = [[1, 2,3], [4, 5, 6], [7, 8, 9]]
+
+y = [row[:] for row in x]
+y[0][0] = 999
+print("x:", x)
+print("y:", y)
+
+import copy
+y2 = copy.deepcopy(x)
+```
+### h.
+```python
+pairs = [(i, i*i) for i in range(6)]
+grid = [(i, j) for i in range(3) for j in range(3) if i != j]
+labels = ["even" if i % 2 == 0 else "odd" for i in range(6)]
+print(pairs, grid, labels, sep="\n")
+```
+### i.
+```python
+s = "To be, or not to be, this is the question"
+spaces = len([ch for ch in s if ch == " "])
+print("Number of spaces:", spaces)
+```
+### j.
+```python
+nums = [5, 2, 9]
+
+nums.append(7)
+
+nums.extend([8, 12])
+
+nums.insert(1, 81)
+
+nums.remove(7)
+
+nums.sort()
+print(nums)
+```
+
+;
