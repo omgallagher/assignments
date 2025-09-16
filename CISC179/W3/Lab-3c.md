@@ -50,6 +50,13 @@ del my_list_ten
 ```
 ### f.
 ```python
+my_new_list_mem = [id(item) for item in my_new_list]
+
+print("Old memory addresses:", my_list_ten_mem)
+print("New memory addresses:", my_new_list_mem)
+
+# Compare element by element
+print("Same identities?:", [my_list_ten_mem[i] == my_new_list_mem[i] for i in range(10)])
 ```
 ### g.
 ```python
@@ -91,5 +98,4 @@ nums.remove(7)
 nums.sort()
 print(nums)
 ```
-
-;
+;A challange I was having was trying to figure out the difference and significance of equality and idenity in python/ trying to know how to use them correctly.
