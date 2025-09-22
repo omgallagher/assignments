@@ -7,7 +7,13 @@ my_tuple = tuple(input(f"Enter value {i+1}: ") for i in range(5))
 print("Your tuple:", my_tuple)
 ```
 ### b.
+; You would have to modify the new value to an element in a tuple by converting it to a list so it can change, and then turn it back to a tuple
 ```python
+my_tuple = (9, 0)
+temp_list = list(my_tuple)
+temp_list[0] = 8
+my_tuple = tuple(temp_list)
+print(my_tuple)
 ```
 ### c.
 ```python
@@ -63,7 +69,6 @@ my_y = (200, 300, 400, 500)
 for i in range(len(my_x)):
     print(f"Index {i} - my_x: {id(my_x[i])}, my_y: {id(my_y[i])}")
 ```
-; Index 0 - my_x: 140721206886408, my_y: 140721206889608
-; Index 1 - my_x: 140721206889608, my_y: 1626351966704
-; Index 2 - my_x: 1626351966704, my_y: 1626355194032
-; Index 3 - my_x: 1626355194032, my_y: 1626355194224
+; Values have their references stored in tuples and lists, so if the same value will appear more frequently then it may have the same memory address
+; Challanges I faced was trying to understand how to use tuple correctly and working around the limits tuple has
+
