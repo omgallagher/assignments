@@ -50,6 +50,32 @@ print("Validated Dictionary:", my_dict)
 ```
 ### d.
 ```python
+data = [
+    ('Name', 'Sarah Connor'),
+    ('Date of Birth', '1 Jan 1980'),
+    ('Address', '1000 Black Mountain Drive'),
+    ('Zip', '92126'),
+    ('Name', 'Jim Hawkins')
+]
+my_dict = {}
+i = 0
+while i < len(data):
+    item = data[i]
+    if len(item) == 2:
+        key = item[0]
+        value = item[1]
+        if key in my_dict:
+            print("Duplicate key found:", key)
+            key = input("Enter a new unique key: ")
+        my_dict[key] = value
+    elif len(item) > 2:
+        print("Tuple has more than 2 items:", item)
+        key = input("Enter a new key for this item: ")
+        value = input("Enter a single value for this key: ")
+        my_dict[key] = value
+    i += 1
+print("Final dictionary:")
+print(my_dict)
 ```
 ### e. 
 ```python
@@ -78,9 +104,11 @@ print("Copy:", d_copy)
 ```
 ### b.
 ```python
+d_copy = d_orig.copy()
 ```
 ### c.
 ```python
 bad_dict = {[1, 2, 3]: "Invalid"}
 ```
 ; Using a mutable type like dict wouldn't work as a dictionary key because of how their hash value can change
+; Challanges I ran into was making loops for creating the dictionary because I had originally missed some things and kept running into error until I figured it out
